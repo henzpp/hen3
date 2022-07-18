@@ -1,0 +1,23 @@
+<!-- textContent / innerHTML -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM Basic</title>
+    <script>
+        window.onload = function () {
+            var output = '';
+            for (var i = 0; i < 10; i++) {
+                output +='<h1>Header -' + i + '</h1>';
+            }
+        //textContent : 순수 텍스트 형식으로 가져옴 - 가로로 길게 p로 나옴
+        //document.body.textContent = output;  
+
+        // innerHTML : HTML 태그를 반영해 가져옴 - h1 적용되어 나옴
+        document.body.innerHTML = output;  
+        };
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

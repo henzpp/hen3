@@ -1,0 +1,45 @@
+<!-- 요소 배치 / 절대위치 사용 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Absolute Position</title>
+    <style>
+        #container {
+            width: 500px; height: 300px;
+            border: 3px solid black;
+            overflow: hidden;
+            position: relative;
+        }
+        .circle {
+            position: absolute;
+            width: 100px; height: 100px;
+            border-radius: 50% 50%; /*원 만드는거*/
+        }
+        #red {
+            background: salmon;
+            left: 20px; top: 20px;
+        }
+        #green {
+            background: seagreen;
+            right: 20px; top: 20px;
+        }
+        #blue {
+            background: dodgerblue;
+            right: 20px; bottom: 20px;
+        }
+        #yellow {
+            background: sandybrown;
+            left: 20px; bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dummy Text</h1>
+    <div id="container">
+        <div id="red" class="circle"></div>
+        <div id="green" class="circle"></div>
+        <div id="blue" class="circle"></div>
+        <div id="yellow" class="circle"></div>
+    </div>
+</body>
+</html>

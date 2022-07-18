@@ -1,0 +1,43 @@
+<!-- 조건문(if else if else) 을 사용하여 백만원의 예산을 감안한 다양한 시나리오의 쇼핑 계획을 작성하세요. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>조건문</title>
+    <script>
+        var money = 100;
+        var check = 0;
+        // 조건문
+        if (money>= 10) {
+            check = 1;
+            money -= 10
+            alert('쇼핑도 식후경')
+        }else if ( money >= 25) {
+            check = 1;
+            moeny -= 65
+            alert('향수 구매!!')
+        } else if (money >= 10) {
+            check = 1;
+            moeny -= 55
+            alert('커피 한잔 쪼롭')
+        } else if (money >= 20) { 
+            check = 1;
+            money -= 35
+            alert('운동화 구매!')
+        } else if (money >= 15) {
+            check = 1;
+            money -= 20
+            alert('미용실 들렀다가')
+        } else if (money >= 20) {
+            check = 1;
+            money -= 0
+            alert('한우 오마카세를 딱 먹고')
+        } else {
+            alert('집에 가자')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

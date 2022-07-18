@@ -1,0 +1,36 @@
+<!-- 위치 속성 공식의 사례를 만들어서 문제를 단계별로 해결하고 설명하세요. 
+    (p.196) position -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Position Formula Basic</title>
+    <style>
+        .box {
+            width: 100px; height: 100px;
+            position: absolute;
+        }
+        .box:nth-child(1) {
+            background-color: rgb(255, 104, 104);
+            left: 10px; top: 10px;
+            z-index: 50;}
+        .box:nth-child(2) {
+            background-color: rgb(0, 212, 212);
+            left: 50px; top: 50px;
+            z-index: 30;}
+        .box:nth-child(3) {
+            background-color: rgb(5, 155, 255);
+            left: 90px; top: 90px;
+            z-index: 10;}
+    </style>
+</head>
+<body>
+    <h1> CHATEAU DE VERSAILLES </h1>
+    <div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <h1> CHATEAU DE VERSAILLES </h1>
+</body>
+</html>

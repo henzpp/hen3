@@ -1,0 +1,29 @@
+<!-- 함수를 이용해 속성 지정하기 -->
+<!-- p.377  -->
+<!-- jqControl_attrSetFunction -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> attr Set Function</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            // 함수를 입력해 속성 지정
+            $('img').attr({
+                alt : 'jQuery',
+                src : function (index){
+                // 변수 선언
+                var size = (index + 1) * 100;
+                // 반환
+                return 'https://en.chateauversailles.fr/sites/default/files/styles/actualite_liste/public/visuels_principaux/actualites/cthomas_garnier_dji_0242_3.jpg?itok=Fa46aAFT' + size + 'x100';
+                } // 왜 옆으로 안길어지지??
+            });
+        });
+    </script>
+</head>
+<body>
+   <img>
+   <img>
+   <img>
+</body>
+</html>

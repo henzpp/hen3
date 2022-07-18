@@ -1,0 +1,32 @@
+<!-- querySelector() 메서드 사용 - 문서 객체 1개 선택 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM Basic</title>
+    <script>
+       //이벤트 연결
+       window.onload = function() {
+        var header = document.querySelector('h1');
+        var text = document.querySelector('h2');
+        
+    // 쿼리는 하나만 가능해서 h1 따로 h2 따로 줌
+    // h1을 여러개 했을때? 맨 첫번째 것만 제대로 출력됨
+
+        //문서 객체 조작
+        header.style.color = 'white';
+        header.style.background = 'orange';
+        header.innerHTML = '물놀이 가고싶다';
+        
+        text.style.color = 'black';
+        text.style.background = 'orange';
+        text.innerHTML = '너므 가고싶따'
+       } 
+    </script>
+
+</head>
+<body>
+    <h1 id="header">Header</h1>
+    <h2 id="header"> 헤헤 </h2>
+</body>
+</html>

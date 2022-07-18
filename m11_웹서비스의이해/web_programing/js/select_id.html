@@ -1,0 +1,25 @@
+<!-- getElementById() 메서드 사용 - 문서 객체 1개 선택 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM Basic</title>
+    <script>
+       //이벤트 연결
+       window.onload = function() {
+        var header = document.getElementById('header');
+    
+        //문서 객체 조작
+        header.style.color = 'white';
+        header.style.background = 'darkblue';
+        header.innerHTML = '물놀이 가고싶다';
+        header.style.textAlign = 'center';
+       } 
+    </script>
+
+</head>
+<body>
+    <h1 id="header">Header</h1>
+    <h2 id="header"> 너므 가고싶다 </h2>
+</body>
+</html>

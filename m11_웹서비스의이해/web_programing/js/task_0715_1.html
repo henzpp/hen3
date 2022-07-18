@@ -1,0 +1,43 @@
+<!--  name 속성으로 여러 문서 객체를 선택하는 사례를 작성하세요. -->
+<!-- p.341 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>document.getElementsByName</title>
+    <script>
+        window.onload = funcion () 
+            var radioObj = document.getElementsByName("radioGroup");
+            var msg = "선택한 사이즈가 없습니다.";
+
+            for (var i = 0; i < radioObj.length; i++) {
+                if(radioObj[i].checked){
+                    msg = "당신이 선택한 사이즈는 아이스크클미 종류를 " +radioObj[i].value+"개 골라 담을 수 있습니다.";
+                    break;
+                }
+            }
+            alert(msg);
+        
+    </script>
+</head>
+<body>
+    <fieldset> 
+        <!-- 필드셋 박스 그릴수 있음!! legend는 제목 -->
+        <legend>아이스크림</legend>
+    <div>
+        <h1> 아이스크림 먹을 사람!! </h1>
+        <hr>
+    </div>
+    <div>
+        <h2> 아이스크림 사이즈 </h2>
+        <input type="radio" name="radioGroup" value="1" id="a"><label for="a">싱글</label><br>
+        <input type="radio" name="radioGroup" value="1" id="a"><label for="a">더블</label><br>
+        <input type="radio" name="radioGroup" value="1" id="a"><label for="a">파인트</label><br>
+        <input type="radio" name="radioGroup" value="1" id="a"><label for="a">쿼터</label><br>
+        <input type="radio" value="1" id="a"><label for="a">패밀리</label><br>
+        <br>
+        <button type="button" class="btn" onclick="actionChoice()" >확인</button>
+    </div>
+    </fieldset>
+</body>
+</html>

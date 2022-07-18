@@ -1,0 +1,30 @@
+<!-- 미디어 규칙과 
+    미디어 속성을 적용한 미디어 쿼리를 사용한 사례를 수행하세요. -->
+<!-- p.251 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CHATEAU DE VERSAILLES</title>
+    <!-- 미디어 속성 -->
+    <!-- <link rel="stylesheet" href="media_screen.css" media="screen">
+    <link rel="stylesheet" href="media_print.css" media="print">
+         -->
+    <style>
+        /*미디어 규칙*/
+        @media screen { body { background-color: seashell;}}
+        @media print { body { background-color: darkcyan;}}
+
+        * { margin: 0; padding: 15px;}
+        body { margin:0 auto; width: 725px; }
+        h1 {font-family:'Times New Roman'; }
+        .up {font-family: Georgia; color: darkgoldenrod;}
+    </style>
+</head>
+<body>
+    <h1>ONCE A PALACE, NOW A MUSEUM</h1>
+    <p class="up">Containing over 60,000 works, the collections of the Palace of Versailles span a very broad period. The collections reflect the dual identity of the Palace, as both a palace occupied by the kings of France and the royal court, and later a museum “dedicated to the glories of France,” inaugurated by Louis-Philippe in 1837.</p>
+    <img src="https://en.chateauversailles.fr/sites/default/files/700angel.jpg">
+    <p>The collections of the museum founded by Louis-Philippe, and still active today, offer a chronological overview of the history of France from the Middle Ages up to the late 19th century. The museum was intended to provide both historical and iconographic insight into the great figures and events which shaped the history of France, and the collections primarily comprise sculptures and paintings dating from the 16th through to the 19th centuries. They include originals and copies, specially-commissioned pieces, and regular purchases.</p>
+</body>
+</html>

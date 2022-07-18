@@ -1,0 +1,36 @@
+<!-- 유동 속성, 그림자(글자, 박스, 중첩), 그레디언트 속성 사례를 작성하여 그 효과를 설명하세요.-->
+<!-- p.201 float / p.208 그레디언트 속성 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Float Basic</title>
+    <style>
+        img { float: left; margin: 0; padding: 10px;}
+        .font_tahoma { font-family: tahoma; }
+        .font_italic { font-style: italic; }
+        h2 { margin: 0; padding: 10px;
+            text-shadow: 2px 5px 5px rgb(190, 188, 188);}
+        div {
+            font-family: tahoma;
+            height: 60px;
+            line-height : 60px;
+            text-align: right;
+            margin: 10px; padding: 10px;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+
+        }
+    </style>
+</head>
+<body>
+    <img src="https://en.chateauversailles.fr/sites/default/files/styles/billet_visite/public/visuels_principaux/billets-visites/billet_chateau_1.jpg?itok=ei45ox5Y">
+    <h2 class="font_tahoma font_italic">CHATEAU DE VERSAILLES</h2>
+    <p>This ticket gives you access to the Palace, "The Recovered Masterpieces" Exhibition, the Gardens (except on Musical Fountain Sows or Musical Gardens days) and the Park.</p>
+    <div>
+        <h3> PALACE TICKET </h3>
+    </div>
+</body>
+</html>

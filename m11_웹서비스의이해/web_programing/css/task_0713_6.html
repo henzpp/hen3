@@ -1,0 +1,63 @@
+<!-- 반응형 웹패턴 4가지 경우를 구현하세요. -->
+<!-- p.260 반응형 웹 패턴 노트북, 태블릿, 폰에 따라 다르게 -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                width: 960px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            #menu {
+                width: 260px;
+                float: left;  /* right; */
+            }
+            #section {
+                width: 700px;
+                float: right;  /* left; */
+            }
+            li { list-style: none; }
+    
+            @media screen and (max-width: 767px) {
+                body { width: auto }
+                #menu { width: auto; float: none;}
+                #section { width: auto; float: none;}
+            }
+        </style>
+    </head>
+<body>
+<!-- 메뉴 바 위로 -->
+    <div id="menu">
+        <ul>
+            <li>The Estate</li>
+            <li>The history</li>
+            <li>The collections</li>
+        </ul>
+    </div>
+    <div id="section">
+        <h1>CHATEAU DE VERSAILLES</h1>
+        <p>In 1789, the French Revolution forced Louis XVI to leave Versailles for Paris. The Palace would never again be a royal residence and a new role was assigned to it in the 19th century, when it became the Museum of the History of France in 1837 by order of King Louis-Philippe, who came to the throne in 1830. The rooms of the Palace were then devoted to housing new collections of paintings and sculptures representing great figures and important events that had marked the History of France. These collections continued to be expanded until the early 20th century at which time, under the influence of its most eminent curator, Pierre de Nolhac, the Palace rediscovered its historical role when the whole central part was restored to the appearance it had had as a royal residence during the Ancien Régime.</p>
+    </div>
+    
+<!-- 메뉴 바 아래로 -->
+    <!-- <div id="section">
+        <h1>CHATEAU DE VERSAILLES</h1>
+        <p>In 1789, the French Revolution forced Louis XVI to leave Versailles for Paris. The Palace would never again be a royal residence and a new role was assigned to it in the 19th century, when it became the Museum of the History of France in 1837 by order of King Louis-Philippe, who came to the throne in 1830. The rooms of the Palace were then devoted to housing new collections of paintings and sculptures representing great figures and important events that had marked the History of France. These collections continued to be expanded until the early 20th century at which time, under the influence of its most eminent curator, Pierre de Nolhac, the Palace rediscovered its historical role when the whole central part was restored to the appearance it had had as a royal residence during the Ancien Régime.</p>
+    </div> 
+    <div id="menu">
+        <ul>
+            <li>메뉴 1</li>
+            <li>메뉴 2</li>
+            <li>메뉴 3</li>
+        </ul>
+    </div> -->
+</body>
+</html>

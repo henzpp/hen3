@@ -1,0 +1,20 @@
+<!--  class 속성으로 여러 문서 객체를 선택하는 사례를 작성하세요. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>getElementByClassName</title>
+    <script>
+        window.onload = function() {
+            var hh = document.getElementByClassName('hh');
+            hh[0].style.color = 'red';
+            hh[1].style.background = 'black';
+        }
+    </script>
+</head>
+<body>
+    <h1 class = 'hh'> 물놀이 </h1>
+    <h3 class = 'hh'> 고고!! </h3>
+    <p class = 'hh'> 서핑 </p>
+</body>
+</html>

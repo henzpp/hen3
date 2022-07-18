@@ -1,0 +1,21 @@
+<!-- 객체 속성의 자료형을 여러가지로 하고 특히 함수도 포함한 사례를 작성하세요. -->
+<!-- p.326 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>객체 속성의 자료형</title>
+    <script>
+       var person = {
+        name: '혜린',
+        number: '5755',
+        do: function(like) {
+            alert(this.name + '은 ' + like + '를 좋아합니다.');
+        }
+       };
+       person.do('웨이크보드');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

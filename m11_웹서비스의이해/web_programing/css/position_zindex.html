@@ -1,0 +1,33 @@
+<!-- z-index 도형의 순서를 변경 큰 숫자가 앞에 오게 됨 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS3 Property Basic</title>
+    <style>
+        .box {
+            width: 100px; height: 100px;
+            position: absolute;
+        }
+        .box:nth-child(1) {
+            background-color: rgb(255, 104, 104);
+            left: 10px; top: 10px;
+            z-index: 50;}
+        .box:nth-child(2) {
+            background-color: rgb(0, 212, 212);
+            left: 50px; top: 50px;
+            z-index: 30;}
+        .box:nth-child(3) {
+            background-color: rgb(5, 155, 255);
+            left: 90px; top: 90px;
+            z-index: 10;}
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    
+    
+</body>
+</html>

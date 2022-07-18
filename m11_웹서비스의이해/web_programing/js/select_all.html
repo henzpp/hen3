@@ -1,0 +1,32 @@
+<!-- querySelectorAll() 메서드 사용 - 문서 객체 여러개 선택 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM Basic</title>
+    <script>
+       //이벤트 연결
+       window.onload = function() {
+        var headers = document.querySelectorAll('h1');
+
+        //for문 사용
+        for (var i = 0; i < headers.length; i++) {
+
+            //변수 선언
+            var header = headers[i];
+            //객체조작
+            header.style.color = 'white';
+            header.style.background = 'orange';
+            header.innerHTML = '물놀이 가고싶다';
+        }
+       }; 
+    </script>
+
+</head>
+<body>
+    <h1 id="header">Header</h1>
+    <h1 id="header">헤헤</h1>
+    <h1 id="header">히히</h1>
+    <h2 id="header"> 헤헤 </h2>
+</body>
+</html>
