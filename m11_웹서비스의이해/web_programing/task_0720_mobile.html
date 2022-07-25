@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <!-- 메타 네임, 컨텐트 다름 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Task Mobile</title>
+
+    <!-- 초기화 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Courier New', Courier, monospace;
+        }
+
+        a { text-decoration: none;}
+        img { border: 0;}
+        li { list-style: none;}
+    </style>
+    <!-- 공통 -->
+    <style>
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+    <!-- 헤더 -->
+    <style>
+        #main-header {
+            padding: 10px 5px;
+            background: red;
+        }
+
+        #main-header h1 {
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 27px;
+            color: white;
+        }
+
+        #main-header ul {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        #main-header li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #main-header li a {
+            color: snow;
+        }
+
+        #main-header li.active a {
+            color: white;
+            font-weight: 500;
+        }
+
+        #main-header label {
+            text-align: center;
+            float: right;
+            width: 40px;
+            height: 27px;
+            line-height: 27px;
+            color: #222;
+            border: 1px solid #222;
+            border-radius: 5px
+        }
+
+        #checkbox {
+            display: none;
+        }
+
+        #checkbox + nav {
+            display: block;
+        }
+
+        #checkbox:checked + nav {
+            display: none;
+        }
+
+    </style>
+    <!-- 본문 / 푸터 -->
+    <style>
+        #main-content {
+            background: white;
+            padding: 40px 0px 30px;
+        }
+
+        #main-content h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: black;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        #main-content h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: black;
+            font-weight: 700;
+            font-size: 25px;
+        }
+
+        #main-content h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: black;
+            font-weight: 900;
+            font-size: 15px;
+        }
+
+        #main-content p {
+            color: #222;
+            text-align: center;
+        
+            font-size: 14px;
+        }
+
+        #main-content img {
+            width: 100%;
+            display: block;
+            margin: 10px auto;
+        }
+        
+        #main2-content {
+            padding: 10px 30px 10px;
+            background: rgb(255, 123, 0)
+        }
+        
+        #main2-content h1 {
+            color: white;
+            font-size: 24px;
+        }
+
+        #main2-content h2 {
+            color: white;
+            font-size: 18px;
+        }
+
+
+        #sub-content {
+            padding-top: 30px;
+        }
+
+        #sub-content h1 {
+            text-align: right;
+            color: rgb(255, 141, 10);
+            font-size: 22px;
+            margin: 10px
+        }
+
+        #sub-content h2 {
+            text-align: center;
+            color: #333;
+            font-size: 22px;
+            margin: 10px
+        }
+
+        #sub-content h3 {
+            text-align: left;
+            color: red;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 10px 21px 5px;
+        }
+
+        #sub-content h4 {
+            text-align: left;
+            color: #555;
+            font-size: 12px;
+            padding: 5px 5px 2px;
+        }
+
+        #sub-content h5 {
+            text-align: right;
+            color: white;
+            background: rgb(235, 0, 0);
+            font-size: 12px;
+            padding: 3px 6px 3px;
+            border-radius: 6px;
+        }
+
+        #sub-content p {
+            text-align: left;
+            color: black;
+            font-size: 15px;
+            font-family: 'Malgun Gothic';
+        }
+
+    
+        #sub-content img {
+            width: 420px;
+            display: block;
+            margin: 10px auto;
+        }
+
+        #main-footer {
+            padding-top: 40px;
+        }
+
+        footer {
+            background: #323232;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-header">
+        <header class="container">
+            <div>
+                <label for="checkbox">▼</label>
+                <h1> Nintendo </h1>
+            </div>
+            <input id="checkbox" checked="checked" type="checkbox">
+            <nav>
+                <ul>
+                    <li><a href="#">Nintendo Switch</a></li>
+                    <li class="active"><a href="#"><span>Nintendo 3DS</a></li>
+                    <li><a href="#">소프트웨어</a></li>
+                    <li><a href="#">고객지원</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div id="main-content">
+        <article class="container">
+            <h1>New Release</h1>
+            <img src="mario.JPG">
+            <h2> MARIO STRIKERS BATTLE LEAGUE</h2>
+            <h3>「격투기」×「축구」
+                규칙이 없는 새로운 스포츠 「스트라이크」가 개막!</h3>
+                
+            <p>볼을 손으로 잡거나, 펀치와 킥으로 라이벌을 날려버리거나, 아이템을 사용해서 필드째로 폭발시키는 등, 보통의 축구에서는 있을 수 없는 플레이가 전부 허용되는, 규칙이 없고 무엇이든 가능한 격투 축구 같은 스포츠입니다.
+                제한된 시간 안에 더 많은 슈팅을 성공시켜서 승리를 거머쥐세요.</p>
+            <br>
+            <br>
+        </article>
+    <div id="main2-content">
+        <article class="container">
+            <h2> Nintendo Switch</h2>
+            <h1> 닌텐도 선불 번호 구입 ⮊ </h1>
+        </article>
+    </div>
+    </div>
+    <div id="sub-content">
+        <article class="container">
+            <img src="star.jpg">
+            <h3 style = "display:inline;"> Nintendo Switch &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h3>
+            <h5 style = "display:inline;"> PK </h5>
+            <p style = "display:inline;"> &nbsp; </p>
+            <h5 style = "display:inline;"> DL </h5>
+            <p style = "display:inline;"> &nbsp; </p>
+            <h5 style = "display:inline;"> 체험판 </h5>
+            <h2> 별의 커비 디스커버리 </h2>
+            <h1> ₩64,800 </h1>
+
+            <p>「별의 커비」 시리즈 최초의 3D 액션 게임 <br>
+
+                「별의 커비」 시리즈 최신작의 무대는, 문명과 자연이 융합한 미지의 새로운 세계. 빨아들이고, 뱉고, 날고, 카피하고. 깊이가 있는 3D 스테이지를, 커비의 친숙한 액션으로 자유롭게 돌아다니며 모험합니다.</p>
+            <h4> Nintendo Switch Only </h4>
+            <h4>2022.03.25 한국닌텐도 발매</h4>
+            <br>
+            <img src="party.jpg">
+            <h3 style = "display:inline;"> Nintendo Switch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h3>
+            <h5 style = "display:inline;"> PK </h5>
+            <p style = "display:inline;"> &nbsp; </p>
+            <h5 style = "display:inline;"> DL </h5>
+            <h2> MARIO PARTY SUPERSTARS</h2>
+            <h1> ₩64,800 </h1>
+            <p> 4인용 파티게임 「마리오 파티 슈퍼스타즈」<br> 
+
+                「주사위 게임」은 「Peach’s Birthday Cake」나 「Space Land」 등, Nintendo 64로 발매되었던 「마리오 파티」 시리즈에서
+                5개의 보드를 리메이크. 추억의 게임과 신작이 동시에. 온 가족이 함께 플레이 하세요. </p>
+            <h4> Nintendo Switch Only </h4>
+            <h4>2022.03.25 
+                한국닌텐도 발매</h4>
+        </article>
+    </div>
+    <div id="main-footer">
+        <footer class="container">
+            <div>©2006 Nintendo of Korea Co., Ltd. All Rights Reserved.</div>
+        </footer>
+    </div>
+</body>
+</html>

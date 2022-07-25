@@ -1,0 +1,39 @@
+<!-- jquery 플러그인을 사용한 사례를 작성하여 출력하세요. p.429 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0;}
+
+        .box {
+            background: black;
+            margin: 5px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src='https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js'></script>
+    <script>
+        $(document).ready(function () {
+
+        
+            for (var i = 0; i < 100 ; i++) {
+                $('<div></div>').addClass('box').css({
+                    width:100,
+                    height: Math.floor(math.random() * 100) +50
+                }).appendTo('body');
+            }
+
+            $('body').masonry({
+                columnWidth: 110
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,4 +1,27 @@
-<!--  애니메이션 효과를 적용한 사례를 작성 후 출력하세요.
+<!--  메서드 체이닝을 사용한 애니메이션 효과를 적용한 사례를 작성 후 출력하세요.
 
     p.398
 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#box').css({
+                width: 100,
+                height: 100,
+                background: 'blue'
+            }).animate({
+                width: 300,
+                opacity: 0.3,
+            }, 500);
+        });
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

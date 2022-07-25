@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="dist/skippr.css">
+    <script>
+        $(document).ready(function(){
+            $("#theTarget").skippr();
+        });
+        $("#theTarget").skippr({
+
+            transition: 'slide',
+            speed: 1000,
+            easing: 'easeOutQuart',
+            navType: 'block',
+            childrenElementType: 'div',
+            arrows: true,
+            autoPlay: false,
+            autoPlayDuration: 5000,
+            keyboardOnAlways: true,
+            hidePrevious: false
+        });
+    </script>
+</head>
+<body>
+           
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="dist/skippr.js"></script>
+
+
+    <div id="container">
+        <div id="theTarget">
+            <div style="background-image: url(img/image1.jpg)"></div>
+            <div style="background-image: url(img/image2.jpg)"></div>
+            <div style="background-image: url(img/image3.jpg)"></div>
+            <div style="background-image: url(img/image4.jpg)"></div>
+            <div style="background-image: url(img/image5.jpg)"></div>
+        </div>    
+    </div>
+</body>
+</html>

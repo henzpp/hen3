@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        div.item:nth-child(1) {background: seashell;}
+        div.item:nth-child(2) {background: peachpuff;}
+        div.item:nth-child(3) {background-color: aliceblue;}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            var width = $('[data-role="slider"]').attr('data-width');
+            var height = $('[data-role="slider"]').attr('data-height');
+            var count = $('[data-role="slider"] div.item').length;
+
+            $('[data-role="slider"]').css({
+                position: 'relative',
+                overflow: 'hidden',
+                width : width,
+                height: height
+            }).find('.container').css({
+                position: 'absolute',
+                width: count * width,
+                overflow: 'hidden'
+            }).find('.item').css({
+                width: width,
+                height: height,
+                float: 'left'
+            });
+
+            var currentPage = 0;
+            var changePage = function() {
+                $('[data-role="slider"] > .container').animate({
+                    left: -currentPage * width
+                }, 500) ;
+            };
+
+            $('#left-button').click(function () {
+                if (currentPage > 0) {
+                    //왼쪽으로 이동
+                    currentPage = currentPage - 1;
+                    changePage();
+                }
+            });
+
+            $('#right-button').click(function () {
+                if (currentPage < count - 1) {
+                    currentPage = currentPage + 1;
+                    changePage();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div data-role="slider" data-width="700" data-height="300">
+        <div class="container">
+            <div class="item">
+                <h1> ONCE A PALACE, NOW A MUSEUM </h1>
+                <p> Containing over 60,000 works, the collections of the Palace of Versailles span a very broad period. The collections reflect the dual identity of the Palace, as both a palace occupied by the kings of France and the royal court, and later a museum “dedicated to the glories of France,” inaugurated by Louis-Philippe in 1837. </p>
+            </div>
+            <div class = "item">
+                <h1> The collections of the museum </h1>
+                <p> The collections of the museum founded by Louis-Philippe, and still active today, offer a chronological overview of the history of France from the Middle Ages up to the late 19th century. The museum was intended to provide both historical and iconographic insight into the great figures and events which shaped the history of France, and the collections primarily comprise sculptures and paintings dating from the 16th through to the 19th centuries. They include originals and copies, specially-commissioned pieces, and regular purchases. </p>
+            </div>
+            <div class = "item">
+                <h1> When founding his museum </h1>
+                <p> When founding his museum, Louis-Philippe refrained from moving the statues dotted around the palace gardens, which remain as they were in Versailles’ royal heyday. On the other hand, he had no qualms about rearranging many of the palace’s historic apartments, particularly in the north and south wings. Since the late nineteenth century, a renewed interest in the iconic home of the kings of France has inspired efforts to restore the palace and refurnish the apartments of the central wing and the Petit Trianon to recreate their pre-revolutionary appearance. Meanwhile, in the Grand Trianon priority is afforded to the First Empire period. </p>
+            </div>
+        </div>
+    </div>
+    <button id = "left-button">⇦</button>
+    <button id = "right-button">⇨</button>
+</body>
+</html>

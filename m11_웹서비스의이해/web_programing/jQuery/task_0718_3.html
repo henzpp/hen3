@@ -1,3 +1,48 @@
 <!-- event 연결을 두가지 방법으로 수행하여 작성 및 결과 출력하세요. -->
 <!-- p.389 쪼끔 응용하기 -->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        // 1번 방법 이벤트 연결
+        $(document).ready(function () {
+            $('#box').css({
+                width: 100,
+                height: 100,
+                background: 'black'
+            }).on('click',function() {
+                $(this).css('background','orange');
+            }).on('mouseenter',function() {
+                $(this).css('background','green');
+            }).on('mouseleave', function() {
+                $(this).css('background','yellow');
+            });
+        });
+
+        // 2번 방법 이벤트 연결
+        // $(document).ready(function() {
+        //     $('#box').css({
+        //         width: 100,
+        //         height: 100,
+        //         background: 'black'
+        //     }).on({
+        //         click: function() {
+        //             $(this).css('background','blue');
+        //         },
+        //         mouseenter: function() {
+        //             $(this).css('background','red');
+        //         },
+        //         mouseleave: function() {
+        //             $(this).css('background','orange');
+        //         }
+        //     });
+        // });
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

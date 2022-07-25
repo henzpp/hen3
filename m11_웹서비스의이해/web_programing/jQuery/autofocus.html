@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Event</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        window.onload = function() {
+            var input_1 = document.querySelectorAll('input')[0];
+            var input_2 = document.querySelectorAll('input')[1];
+
+            //input 1
+            input_1.onkeydown = function() {
+                if (6 <= input_1.value.length) {
+                    input_2.focus();
+                }
+            };
+            //input 2
+            input_2.onkeydown = function() {
+                var event = event || window.event;
+                if (event.keyCode == 8 && input_2.value.length ==0) {
+                    input_1.focus();
+                }
+            };
+        };
+    </script>
+
+</head>
+<body>
+    <input type="text" maxlength="6">
+    <span>-</span>
+    <input type="text" maxlength="7>"
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="jquery.shuffle-images.min.js">
+    <script src="jquery.shuffle-images.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".shuffle-me").shuffleImages({
+                trigger: "imageMouseMove",
+                triggerTarget: false,
+                mouseMoveTrigger: 500,         
+                hoverTrigger: 500,            
+                scrollTrigger: 100,       
+                target: "> img"             
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="shuffle-me" data-si-mousemove-trigger="100">
+        <div class="shuffle-me" data-si-hover-trigger="1000">
+            <img src="demo/images/4.jpg">
+            <img src="demo/images/2.jpg">
+            <img src="demo/images/3.jpg">
+            <img src="demo/images/5.jpg">
+            <img src="demo/images/6.jpg">
+            <img src="demo/images/7.jpg">
+        </div>
+    </div>
+</body>
+</html>

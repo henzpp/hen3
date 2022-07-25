@@ -1,0 +1,65 @@
+<!-- 문서객체 추가하기 8개 사례를 작성하여 출력하세요.-->
+<!-- appendto prependto << p.419 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery Create</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+  
+        // prepend/ append
+
+        // $(document).ready(function () {
+        //     $('#wrap').css({
+        //         backgroundColor : 'teal',
+        //         color: 'snow'
+        //      }).prepend('<h1>서프</h1>');
+        // });
+
+
+        // prependTo / appendTo
+
+        $(document).ready(function () {
+            $('<h1>Surf</h1>').css({
+                backgroundColor : 'teal',
+                color: 'snow'
+             }).appendTo('#wrap');
+
+        });
+
+        // before / after
+
+        // $(document).ready(function () {
+        //     $('#wrap').css({
+        //         backgroundColor : 'teal',
+        //         color: 'snow'
+        //      }).after('<h1>Surf</h1>');
+        // });
+
+        // insertBefore / insertAfter
+
+        // $(document).ready(function () {
+        //     $('<h1>Surf</h1>').css({
+        //         backgroundColor : 'teal',
+        //         color: 'snow'
+        //      }).insertAfter('#wrap');
+
+        // });
+    </script>
+</head>
+<body>
+    <div>
+
+    </div>
+    <div id="wrap">
+            <h1> /// Surf /// </h1>
+            <h1> 111 Sufr 111 </h1>
+            <h1> 222 Sufr 222 </h1>
+            <h1> 333 Sufr 333 </h1>
+            <h1> 222 Sufr 222 </h1>
+            <h1> 111 Sufr 111 </h1>
+        </div>
+    </div>
+</body>
+</html>
