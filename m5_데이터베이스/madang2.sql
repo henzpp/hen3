@@ -86,7 +86,12 @@ WHERE customer.custid = orders.custid
 AND customer.address LIKE '대한민국%';
 
 --[과제_1004_7] 3번 고객이 주문한 도서의 최고 금액보다 더 비싼 도서를 구입한 주문의 주문번호와 금액을 출력
-SELECT * FROM orders;
+SELECT orderid, saleprice
+FROM orders o
+WHERE saleprice > ( SELECT MAX(o.saleprice)
+    FROM customer c, orders o
+    WHERE o.custid=c.custid AND c.custid='3');
+
 
 
 --[과제_1004_8] 고객번호가 2 이하인 고객의 판매액을 출력(단, 고객이름과 고객별 판매액 포함)
@@ -98,7 +103,41 @@ WHERE cs.custid = orders.custid
 GROUP BY cs.name;
 
 --[과제_1004_9] lmembers 데이터를 고객별로 속성(성별,나이,거주지역) 구매합계(반기별), 평균구매(반기별), 구매빈도(반기별)를 출력
-SELECT * FROM demo;
 
+SELECT  * FROM customer;
+select * from orders;
 
+select c.name, sum(o.saleprice)
+from orders o, customer c
+where c.custid=o.custid(+)
+group by c.name;
 
+--Q. NULL을 0으로 컬럼명을 고객별 판매액으로 수정
+select c.name, NVL(SUM(o.saleprice),0) "고객별 판매액"
+from orders o, customer c
+where c.custid=o.custid(+)
+group by c.name;
+
+-- view는 가상의 테이블이라고 하며 데이터는 없고 SQL만 저장되어 있는 object 
+-- view는 기본 테이블이나 뷰를 삭제하게 되면 해당 데이터를 기초로 한 다른 뷰들이 자동으로 삭제되고 ALTER 명령을 사용할 수 없다.
+-- 내용을 수정하기 위해서는 DROP & CREATE를 반복하여야 하며 원본 이름으로 생성할 수 없다. 실무에서는 "vw_"접미사나 접두사를 붙여 사용.
+create view vw_customer
+as select *
+from customer
+where address like '%대한민국%';
+
+select * from vw_customer;
+
+-- Q. orders 테이블에서 고객이름과 도서이름을 바로 확인할 수 있는 뷰를 생성한 후
+-- 김연아 고객이 구입한 도서의 주문번호, 도서이름, 주문액을 출력
+CREATE VIEW vw_orders
+as select o.orderid, o.custid, c.name, o.bookid, b.bookname, o.saleprice, o.orderdate
+from orders o, customer c, book b
+WHERE o.custid=c.custid AND o.bookid=b.bookid;
+
+SELECT orderid, bookname, saleprice
+FROM vw_orders
+WHERE name='김연아';
+
+-- Q. 앞서 생성한 뷰를 vw_customer를 삭제
+DROP VIEW vw_customer;
