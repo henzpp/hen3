@@ -66,7 +66,7 @@ select last_name, trunc((sysdate-hire_date)/365,0) 근속연수 from employees;
 
 
 --[과제_1005_1] employees 테이블에서 채용일에 6개월을 추가한 날짜를 last_name과 같이 출력 
-select last_name, add_months(hire_date,6) "6개월 추가"
+select last_name, hire_date, add_months(hire_date,6) "6개월 추가"
 from employees;
 
 select last_name, hire_date from employees;
@@ -76,6 +76,8 @@ FROM employees;
 --[과제_1005_2] 이번달의 말일을 반환하는 함수를 사용하여 말일을 출력
 select sysdate from dual;
 select last_day(to_date(sysdate,'yyyy-mm-dd')) from dual;
+
+select last_name, hire_date, last_day(hire_date) from employees;
 
 --[과제_1005_3] employees 테이블에서 채용일과 현재시점간의 근속월수를 출력
 select hire_date, trunc((sysdate-hire_date)/30,0) 근속월수 from employees;
@@ -93,6 +95,11 @@ having avg(salary) >= 5000
 order by count(*) DESC;
 
 --[과제_1005_6] 사원번호(employee_id)가 110인 사원의 부서명을 출력
+SELECT DEPARTMENT_NAME
+FROM EMPLOYEES,DEPARTMENTS
+WHERE employees.department_id = departments.department_id(+)
+AND employees.employee_id=110;
+
 select employee_id, job_id from employees
 where employee_id='110';
 
