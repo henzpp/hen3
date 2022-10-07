@@ -5,6 +5,7 @@ select last_name ||'is a'||job_id as EXPLAIN from employees;
 -- distinct
 select distinct job_id from employees;
 
+--³Î °ª
 select * from employees where commission_pct is null;
 select * from employees where commission_pct is not null;
 
